@@ -18,18 +18,78 @@
 
  #header{
     width: 970px;
-    height: 140px;
+    height: 120px;
     margin: auto;
     /* border: 1px solid red; */
+    position: relative;
  }
 
  /*
     header > h1 의 너비를 181px, 높이를 59px,
     배경img는 img폴더에 있는 logo.png를 지정. 텍스틑 보이지 않도록 한다.
 */
+
  #header>h1{
     width: 181px;
     height: 59px;
     background: url("../images/logo.png") no-repeat;
     text-indent: -9999px;
  }
+
+
+ /*********************************
+            메뉴 작업
+ *********************************/
+
+ #header .gnb{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+ }
+
+ #header .gnb li{
+
+    flex: 1 1 194px;
+    height: 100%; /* 50px*/
+    background-color: rgb(255, 122, 0);
+    
+ }
+
+#header .gnb li a{
+    display: block;
+    height: 100%;
+    width: auto;
+
+    text-align: center;
+    
+}
+
+#header .gnb li a>span.menu{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+
+    margin-top: 15px;
+    padding-left: 30px; /*앞의 아이콘과 겹치지 않도록 하기 위함이다.*/
+
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    
+    background: url("../images/gnb_bult.png") no-repeat;
+
+}
+
+#header .gnb li a>span.m02{background-position-y: -22px;}
+#header .gnb li a>span.m03{background-position-y: -44px;}
+#header .gnb li a>span.m04{background-position-y: -66px;}
+#header .gnb li a>span.m05{background-position-y: -88px;}
+
+#header .gnb li:hover{
+    background-color: rgb(230, 120, 0);
+}
