@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex1_Flex</title>
+<style>
+    ul.container{
+        list-style: none;
+        padding: 0;
+        margin: auto;
+        border: 1px solid rgb(255, 0, 0);
+        width: 80%;
+
+        /*flex개념 : Layout 배치 기능*/
+        display: flex;
+        flex-direction: row; /*row가 기본값이다*/
+        /*flex-direction: row-reverse;*/ /*행 방향(역순)*/
+        /*flex-direction: column;*/ /*열 방향*/
+        /*flex-direction: column-reverse;*/ /*열 방향(역순)*/
+
+
+        /*container가 item을 한 행에 모두 담지 못 할 경우 줄바꿈을 지정하는 법*/
+        /*flex-wrap: nowrap;*/ /*기본값: 줄바꿈 하지 않음*/
+        flex-wrap: wrap; /*
+                            여러 item들을 묶는다.
+                            즉, 줄바꿈하여 표현이 가능함!
+                         */
+
+        /*flex-direction과 flex-wrap 속성을 하나로 묶은 속성*/
+        /* flex-flow: row nowrap; */
+
+    }
+
+    li.item{
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+        border: 1px solid blue;
+        text-align: center; /*수평상 중앙 정렬*/
+
+        line-height: 50px;
+        
+        /*flex 속성*/
+        flex-basis: 50px; /*item의 기본 너비*/
+        flex-grow: 1; /*item 증가 너비 비율*/
+       
+    }
+
+    li.item>a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
+</head>
+<body>
+    <ul class="container">
+        <li class="item"><a href="">항목1</a></li>
+        <li class="item"><a href="">항목2</a></li>
+        <li class="item"><a href="">항목3</a></li>
+        <li class="item"><a href="">항목4</a></li>
+        <li class="item"><a href="">항목5</a></li>
+    </ul>
+</body>
+</html>
